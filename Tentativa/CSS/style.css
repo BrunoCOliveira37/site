@@ -87,15 +87,15 @@ header ul li a{
 .prog{
     width: 40%;
     border-radius: 50px;
-    margin-top: 300px;
-    margin-left: 200px;
+    margin-top: 10%;
+    margin-left: 10%;
     margin-bottom: 500px;
 }
 div.text-bem-vindo{
     float: right;
-    margin-top: 400px;
-    margin-right: 200px;
-    margin-bottom: 500px;
+    margin-top: 15%;
+    margin-right: 10%;
+    margin-bottom: 10%;
 }
 .branco{
     color: white;
@@ -110,15 +110,17 @@ div.text-bem-vindo{
 .navbar2{
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     transition: 0.6s;
     padding: 40px 100px;
     z-index: 100000;
 }
-
-.navbar2 .logo1{
+.navbar2 .switch{
     display: none;
+}
+.navbar2.sticky .logo1{
     position:relative;
     font-weight: 700;
     color: #fff;
@@ -127,13 +129,14 @@ div.text-bem-vindo{
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: 0.6s;
-    margin-right: 550px;
+    margin-right: 10%;
     }
 
 .navbar2 ul{
     
     position: relative;
     display: flex;
+    
     justify-content: center;
     align-items: center;
 }
@@ -157,8 +160,6 @@ div.navbar2.sticky{
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     transition: 0.6s;
     padding: 40px 100px;
     z-index: 100000;
@@ -166,6 +167,31 @@ div.navbar2.sticky{
     background: #660550;
 
 }
-div.navbar2.sticky ul a.logo1{
-    display: block;
+div.navbar2.sticky ul a.switch{
+    display: flex;
+}
+.btn-roxo2{
+    padding: 5px 10px;
+    text-decoration: none;
+    color: purple;
+    background-color: #660550;
+}
+.btn-roxo2:hover{
+    padding: 10px 15px;
+    color: white;
+    background-color: purple;
+    border-color: purple;
+    cursor:pointer;
+}
+.btn2{
+    min-width: 100px;
+    color: white;
+    border-color: purple;
+    border: 2px solid;
+    height: 30px;
+    border-radius: 20px;
+    background-color: purple;
+    transition: 0.5s;
+    font-size: 14px;
+    
 }
