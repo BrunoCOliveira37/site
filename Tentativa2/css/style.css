@@ -1,0 +1,321 @@
+/*-Estilos Gerais-*/
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+hr{
+    border: 2px solid purple;
+    border-radius: 1px;
+    width: 75%;
+    margin-left: 10%;
+}
+h6{
+    padding: 10px 15px;
+}
+h6 span{
+    color: purple;
+}
+h6 i{
+    color: purple;
+}
+h2.titulo{
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+h2.titulo span{
+    color: purple;
+}
+body{
+    background-color: #000;
+    height: 100vh;
+}
+.Interface{
+    max-width: 90%;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+}
+/*-Header-*/
+header{
+    padding: 40px 4%;
+}
+header > .Interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav ul{
+    list-style: none;
+}
+header a{
+    text-decoration: none;
+}
+.btn{
+    min-width: 100px;
+    color: white;
+    border-color: purple;
+    border: 2px solid;
+    height: 30px;
+    border-radius: 20px;
+    background-color: purple;
+    transition: 0.5s;
+    font-size: 20px;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: purple;
+    background-color: #000;
+}
+.btn:hover{
+    padding: 10px 15px;
+    color: white;
+    background-color: purple;
+    border-color: purple;
+    cursor:pointer;
+    box-shadow: 0px 0px 8px purple;
+}
+header .logo{
+    height: 65px;
+}
+.links{
+
+    color: #c5c5c5;
+    margin-top: 20px;
+    margin-left: 9%;
+    display: inline-block;
+}
+.links2{
+
+    color: #c5c5c5;
+    margin-top: 20px;
+    margin-left: 10px;
+    display: inline-block;
+}
+.links2:hover{
+    transform: scale(1.25);
+    transition: 0.2s;
+    color: purple;
+}
+.links:hover{
+    transform: scale(1.25);
+    transition: 0.2s;
+    color: purple;
+}
+.links i{
+    font-size: 30px;
+}
+.links2 i{
+    font-size: 30px;
+}
+header .logo:hover{
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+/*-Estilo do Topo-*/
+section.topo-do-site{
+    padding: 40px 4%;
+}
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+.topo-do-site .txt-topo-site h1{
+    color: #fff;
+    font-size: 42px;
+}
+.topo-do-site .txt-topo-site h1 span{
+    color: purple;
+}
+.topo-do-site .txt-topo-site h2{
+    color: #fff;
+}
+.topo-do-site .txt-topo-site h2 b{
+    color: purple;
+}
+.topo-do-site .txt-topo-site p{
+    color: #c5c5c5;
+    margin: 40px 0;
+}
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+/*-Navbar-*/
+.navbar .logo1{
+    height: 65px;
+}
+.navbar .logo1:hover{
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+.navbar .logo-links{
+    position: relative;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+.btn1{
+    min-width: 100px;
+    color: white;
+    border-color: purple;
+    border: 2px solid;
+    height: 30px;
+    border-radius: 20px;
+    background-color: purple;
+    transition: 0.5s;
+    font-size: 14px;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: rgb(49, 0, 50);
+}
+.btn1:hover{
+    padding: 5px 10px;
+    color: #000;
+    background-color: white;
+    border-color: white;
+    cursor:pointer;
+    box-shadow: 0px 0px 8px #fff;
+}
+.navbar .switch{
+    display: none;
+}
+.navbar.sticky .switch{
+    display: block;
+}
+.navbar.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    transition: 0.6s;
+    padding: 10px 100px;
+    z-index: 100000;
+    padding: 5px 100px;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 20px 100px;
+    z-index: 100000;
+    background-color: rgb(49, 0, 50);
+}
+.navbar ul{
+    position: relative;
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar ul .objetos{
+    position: relative;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+.navbar.sticky ul .objetos{
+    margin-left: -17%;
+}
+.navbar ul li{
+    position: relative;
+    list-style: none;
+}
+.navbar ul a{
+    text-decoration: none;
+    position: relative;
+    margin: 0 15px;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+.navbar ul .objetos a{
+    color: #c5c5c5;
+}
+.navbar ul .objetos a:hover{
+    color: white;
+    transition: 0.2s;
+}
+
+
+
+
+
+/*-Sobre Mim-*/
+section.sobre{
+    padding: 40px 4%;
+}
+.sobre div.sobre-mim-info p{
+    color: #c5c5c5;
+    margin: 40px 4%;
+}
+.sobre div.sobre-mim-tec h3{
+    color: white;
+    font-size: 30px;
+}
+.sobre div.sobre-mim-tec h3 i{
+    color: purple;
+}
+.sobre div.sobre-mim-tec span{
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    line-height: 60px;
+    background-color: rgb(41, 1, 30);
+    border-radius: 10px;
+}
+.sobre .foto-info{
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+    align-content: center;
+}
+.sobre .foto-info img{
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid;
+    border-color: purple;
+    box-shadow: 0px 0px 8px purple;
+}
+
+.sobre .foto-info p{
+    color: #c5c5c5;
+    margin: 40px 4%;
+    font-size: 20px;
+}
+/*-Projetos-*/
+.projetos{
+    padding: 40px 4%;
+}
+.projetos .flex{
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 10px;
+}
