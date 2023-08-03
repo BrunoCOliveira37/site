@@ -319,3 +319,122 @@ section.sobre{
     height: 500px;
     margin: 10px;
 }
+.card .slide{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+.card .slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+    transition-property: clip-path;
+}
+.card .slide img{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    border-radius: 5px;
+}
+.card .slide .info{
+    position: absolute;
+    top: 0;
+    padding: 15px 30px;
+}
+.card .slide .info h2{
+    color: purple;
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+.card .slide .info p{
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    width: 60%;
+    padding: 10px;
+}
+.card .navigation{
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);    
+}
+.card .navigation .butn{
+    background: rgba(255,255,255, 0.5);
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+@media(max-width:820px){
+    .card{
+        width: 600px;
+        height: 375px;
+    }
+    .card .slide .info{
+            padding: 10px 25px;
+    }
+    .card .slide .info h2{
+        font-size: 35px;
+    }
+    .card .slide .info p{
+        width: 70%;
+        font-size: 15px;
+    }
+    .card .navigation{
+        bottom: 25px;
+    }
+    .card .navigation .butn{
+        width: 10px;
+        height: 10px;
+        margin: 8px;
+    }
+}
+@media(max-width:620px){
+    .card{
+        width: 400px;
+        height: 250px;
+    }
+    .card .slide .info{
+            padding: 10px 20px;
+    }
+    .card .slide .info h2{
+        font-size: 30px;
+    }
+    .card .slide .info p{
+        width: 80%;
+        font-size: 13px;
+    }
+    .card .navigation{
+        bottom: 15px;
+    }
+    .card .navigation .butn{
+        width: 8px;
+        height: 8px;
+        margin: 6px;
+    }
+}
+@media(max-width:420px){
+    .card{
+        width: 320px;
+        height: 200px;
+    }
+    .card .slide .info{
+            padding: 5px 10px;
+    }
+    .card .slide .info h2{
+        font-size: 25px;
+    }
+    .card .slide .info p{
+        width: 90%;
+        font-size: 11px;
+    }
+    .card .navigation{
+        bottom: 10px;
+    }
+}
