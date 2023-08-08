@@ -13,10 +13,18 @@
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!--Fim Bootstrap-->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("9s0WlgrfPt3zf84Bh");
+        })();
+    </script>
 </head>
 <body>
-    <a class="links" href=""><i class="bi bi-github"></i></a>
-    <a class="links2" href=""><i class="bi bi-linkedin"></i></a>
+    <a id="home" class="links" href="https://github.com/BrunoCOliveira37"><i class="bi bi-github"></i></a>
+    <a class="links2" href="https://www.linkedin.com/in/bruno-chaves-de-oliveira-775561264/"><i class="bi bi-linkedin"></i></a>
     <header>
         
         <div class="Interface">
@@ -29,7 +37,7 @@
             </div>
             <nav class="curriculo">
                 <ul>                    
-                    <li><a class="btn" href="">Currículo</a></li>
+                    <li><a class="btn" href="CV.docx">Currículo</a></li>
                 </ul>
             </nav>
             
@@ -54,23 +62,24 @@
                 </div>
             </div>
         </section>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br>
         <section class="navbar">
             <ul>
                <div class="logo-links">
-                <a href=""><img class="logo1 switch" src="Images/logo.png" alt="logo"></a>
-                <a class="links switch" href=""><i class="bi bi-github"></i></a>
-                <a class="links2 switch" href=""><i class="bi bi-linkedin"></i></a>
+                <a href="#home"><img class="logo1 switch" src="Images/logo.png" alt="logo"></a>
+                <a class="links switch" href="https://github.com/BrunoCOliveira37"><i class="bi bi-github"></i></a>
+                <a class="links2 switch" href="https://www.linkedin.com/in/bruno-chaves-de-oliveira-775561264/"><i class="bi bi-linkedin"></i></a>
                </div>                
                 <div class="objetos">
-                    <li><a href="">1. Sobre Mim</a></li>	
-				    <li><a href="">2. Projetos</a></li>
-				    <li><a href="">3.Contato</a></li>
+                    <li><a href="#sobre">1. Sobre Mim</a></li>	
+				    <li><a href="#projetos">2. Projetos</a></li>
+				    <li><a href="#contato">3.Contato</a></li>
                 </div>            
-                <li><a class="btn1 switch" href="">Curriculo</a></li>
+                <li><a class="btn1 switch" href="CV.docx">Curriculo</a></li>
             </ul>
         </section>
         <section id="sobre" class="sobre">
+            <br>
             <div class="Interface">
                 <h2 class="titulo">
                     SOBRE <span>MIM.</span>
@@ -85,10 +94,10 @@
                             <span class="fundo">C#</span>
                             <span class="fundo">Unity</span>
                             <span class="fundo">C++</span>
-                            <span class="fundo">Python</span><br>
+                            <span class="fundo">Python</span>
                             <span class="fundo">CSS</span>
                             <span class="fundo">HTML</span>
-                            <span class="fundo">JavaScript</span> <br>
+                            <span class="fundo">JavaScript</span>
                             <span class="fundo">Photoshop</span>
                             <span class="fundo">GitHub</span>    
                         </div>               
@@ -114,15 +123,17 @@
                             <div class="slide active">
                                 <img src="Images/Meu Jogo.png" alt="1 jogo">
                                 <div class="info">
-                                    <h2>Space Scape Room</h2>
-                                    <p>Esse jogo foi feito em colaboração com mais 5 pessoas, e serviu como projeto final para entrar no Ramo Estudantil IEE CEFETRJ. Tivemos pouco mais de um mês para concluir o projeto. No botão escrito "Incompleto" é possível fazer o download da versão que foi apresentada para o IEEE, já no botão "Minha versão" é possível fazer o download do mesmo jogo mas finalizado por mim com algumas ideias que não conseguimos colocar no jogo a tempo de apresentar. </p>                            
+                                    <h2>Space Scape <span>Room</span></h2>
+                                    <!--Esse jogo foi feito em colaboração com mais 5 pessoas, e serviu como projeto final para entrar no Ramo Estudantil IEEE CEFETRJ. Tivemos pouco mais de um mês para concluir o projeto. No botão escrito "Incompleto" é possível fazer o download da versão que foi apresentada para o IEEE, já no botão "Minha versão" é possível fazer o download do mesmo jogo mas finalizado por mim com algumas ideias que não conseguimos colocar no jogo a tempo de apresentar.-->
+                                    <p>Esse jogo foi feito em colaboração com mais 5 pessoas, e serviu como projeto final para entrar no Ramo Estudantil IEEE CEFETRJ. Tivemos pouco mais de um mês para concluir o projeto e apresentá-lo. O jogo atualmente há diversas alterações feita somente por mim. <a href="Space Scape Room (Incompleto).rar">(Jogo Incompleto)</a></p>                            
+                                    <br><a class="btn" href="#sobre">Download</a>
                                 </div>
                             </div>
                             
                             <div class="slide">
                                 <img src="Images/Wolfbyte.png" alt="wolfbyte">
                                 <div class="info">
-                                    <h2>Wolfbyte</h2>
+                                    <h2>Wolf<span>byte</span></h2>
                                     <p>Equipe do Ramo Estudantil IEEE Cefet/RJ, onde é desenvolvida diversos projetos sendo eles Web, IA e Games. Atualmente participo da equipe de Games, porém nenhum dos projetos que estou participando foi finalizado.</p>
                                 </div>
                             </div>
@@ -131,9 +142,86 @@
                                 <div class="butn"></div>
                             </div>
                     </div>
+                    <script type="text/javascript">
+                        var slides = document.querySelectorAll('.slide');
+                        var butns = document.querySelectorAll('.butn')
+                        let currentSlide = 1;
+                        //manual
+                        var manualNav = function(manual){
+                            slides.forEach((slide)=>{
+                                slide.classList.remove('active');
+                                butns.forEach((butn)=>{
+                                    butn.classList.remove('active');
+                                })
+                            });
+
+
+                            slides[manual].classList.add('active');
+                            butns[manual].classList.add('active');
+                            }
+                        butns.forEach((butn, i) => {
+                            butn.addEventListener("click", ()=> {
+                                manualNav(i);
+                                currentSlide=i;
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+        </section>
+        <section class="contato" id="contato">
+            <div class="Interface">
+                <h2 class="titulo">MEU <span>CONTATO.</span></h2>
+                <div class="container">
+                    <div class="contact-info">
+                        <div>
+                            <h2>Contatos</h2>
+                        <ul class="info">
+                            <li>
+                                <span><i class="bi bi-telephone"></i></span>
+                                <span>+55 (21) 99822-2513</span>
+                            </li>
+                            <li>
+                                <span><i class="bi bi-envelope"></i></span>
+                                <span>brunochavesdeoliveira2003@<br>gmail.com</span>
+                            </li>
+                        </ul>              
+                        </div>                    
+                        <ul class="sci">
+                            <li><a href="https://github.com/BrunoCOliveira37"><i class="bi bi-github"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/bruno-chaves-de-oliveira-775561264/"><i class="bi bi-linkedin"></i></a></li>
+                            <li><a href="https://www.instagram.com/__brunochaves/"><i class="bi bi-instagram"></i></a></li>                                                                                    
+                        </ul>
+                    </div>
+                    <div class="contact-form">
+                        <h2>Mande uma mensagem</h2>
+                            <form class="formBox">
+                                <div class="inputBox w50">
+                                    <input type="text" id="name" name="" required>
+                                    <span>Nome</span>
+                                </div>
+                                <div class="inputBox w50">
+                                    <input type="text" id="surname" name="" required>
+                                    <span>Sobrenome</span>
+                                </div>
+                                <div class="inputBox w50">
+                                    <input type="text" id="email" name="" required>
+                                    <span>E-mail</span>
+                                </div>
+                                <div class="inputBox w100">
+                                    <textarea name="" id="message" required></textarea>
+                                    <span>Escreva sua mensagem aqui...</span>
+                                </div>
+                                <div class="inputBox w100">
+                                    <button type="submit" onclick="sendMail()">Enviar</button>
+                                </div>
+                            </form>                            
+                        
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+    
 </body>
 </html>

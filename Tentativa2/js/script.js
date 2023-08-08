@@ -6,29 +6,23 @@ function navbarSticky() {
     navbar2.classList.toggle("sticky", scrollPosition>pos);
 
 }
+function sendMail(){
+    var params = {
+        name:document.getElementById("name").value + " "+ document.getElementById("surname").value,
+        email:document.getElementById("email").value,
+        message:document.getElementById("message").value,
 
+    };
 
+const serviceID = "service_kiscosa";
+const templateID = "template_2phh9ve";
+emailjs.send(serviceID,templateID,params).then((res) =>{
+    document.getElementById("name").value = "",
+    document.getElementById("email").value = "",
+    document.getElementById("message").value = "",
+    console.log(res);
+    alert("Email enviado com sucesso!");
+})
+.catch((err)=>console.log(err));
+; }
 
-var slides=document.querySelectorAll('.slide');
-var btns=document.querySelectorAll('.butn');
-let currentSlide= 1;
-//manual
-var manualNav=function(manual){
-    slides.forEach((slide) => {
-        slide.classList.remove("active");
-
-        btns.forEach((butn)=>  {
-            butn.classList.remove("active");
-        });
-    })
-
-
-    slides[manual].classList.add("active");
-    btns[manual].classList.add("active");
-}
-btns.forEach((butn, i) => {
-    butn.addEventListener("click",()=>{
-        manualNav(i);
-        currentSlide= i;
-    });
-});
